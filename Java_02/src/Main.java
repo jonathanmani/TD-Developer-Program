@@ -33,6 +33,24 @@ public class Main {
         } else {
             System.out.println("This is not a Palindrome");
         }
+
+        /*------------------------------------------------------------------
+        02. Write a program to check whether it's a leap year or not
+        ------------------------------------------------------------------- */
+        Scanner scanner2 = new Scanner(System.in);
+        System.out.println("Type a year");
+        int leapyear = scanner2.nextInt();
+        boolean isLeapYear;
+
+        isLeapYear = leapyear % 4 == 0;
+
+        isLeapYear = isLeapYear && (leapyear % 100 !=0 || leapyear % 400 == 0);
+
+        if(isLeapYear){
+            System.out.println("This is a leapyear");
+        } else{
+            System.out.println("This is not a leapyear");
+        }
     }
     private static boolean isNumeric(String str){
         try{
