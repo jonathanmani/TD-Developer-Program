@@ -51,6 +51,28 @@ public class Main {
         } else{
             System.out.println("This is not a leapyear");
         }
+
+         /*------------------------------------------------------------------
+        03. Write a program that takes in a user input (String) and performs
+        the following operation on
+            a) Get the string length and print it
+            b) Reverse a string and print it
+        ------------------------------------------------------------------- */
+
+        Scanner scanner3 = new Scanner(System.in);
+        System.out.println("Write a string");
+        String userInput2 = scanner3.nextLine();
+
+        int strLength = userInput2.length();
+        String reverseStr = "";
+        char ch;
+
+        for(int i = 0; i<strLength; i++){
+            ch = userInput2.charAt(i);
+            reverseStr = ch + reverseStr;
+        }
+
+        System.out.printf("This string is %d characters long. When reversed, it prints out as %s", strLength, reverseStr);
     }
     private static boolean isNumeric(String str){
         try{
